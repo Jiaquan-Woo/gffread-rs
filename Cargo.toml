@@ -1,0 +1,21 @@
+[package]
+name = "gffread"
+version = "0.0.1"
+edition = "2021"
+description = "GFF/GTF/BED format utility - Rust rewrite of gffread"
+
+[[bin]]
+name = "gffread"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+regex = "1"
+# Pure-Rust gzip support so .gz inputs work without native zlib on Windows.
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
