@@ -3,7 +3,7 @@ A Rust rewrite of gffread for use on Windows platform.
 This project replicates the functionality and output of the original C++ gffread (v0.12.9) in safe Rust, producing byte-for-byte identical output for the supported features.
 
 The functions listed below have been verified.
-1. covert gff to gtf (eg. gffread annotation.gff -T -o annnotation.gtf)
+1. convert gff to gtf (eg. gffread annotation.gff -T -o annnotation.gtf)
 2. extract CDS sequences from the genome fasta file and gff (eg. gffread -x SaLA2157_chr9.cds.fa -g SaLA2157_chr9.fasta SaLA2157_chr9.gff)
 3. extract protein sequences from the fasta file and gff (eg. gffread -y SaLA2157_chr9.pep.fa -g SaLA2157_chr9.fasta SaLA2157_chr9.gff)
 4. extract transcript sequences from the fasta file and gff (eg. gffread -w SaLA2157_chr9.transcript.fa -g SaLA2157_chr9.fasta SaLA2157_chr9.gff)
